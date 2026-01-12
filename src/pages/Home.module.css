@@ -1,0 +1,69 @@
+.container {
+  padding: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.card {
+  background: var(--white);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 200px;
+  background-color: #e5e7eb;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-md);
+}
+
+.productName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.price {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-bottom: var(--spacing-md);
+}
+
+.button {
+  margin-top: auto;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+}
