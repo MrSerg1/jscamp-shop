@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+::view-transition-group(root) {
+  animation-duration: 0.5s;
+}
+
+@theme {
+  --color-primary: rgb(var(--primary-color));
+  --color-secondary: rgb(var(--secondary-color));
+  --color-background: rgb(var(--background-color));
+  --color-text: rgb(var(--text-color));
+
+  --radius: var(--radius);
+}
+
+
+/* Definición de variables */
+:root {
+  --primary-color: 72 61 76;
+  --secondary-color: 30 58 175;
+  --primary-text-color: 15 23 51;
+  --primary-background-color: 249 247 246;
+  
+  /* Es buena práctica mantener las medidas sin unidad si vas a calcular, 
+     pero para variables simples 'rem' está bien */
+  --radius: 8px; 
+}
+
+/* Aplicación de estilos base usando @layer base (La forma de Tailwind) */
+@layer base {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /* Usamos las variables corregidas */
+    color: var(--primary-text-color);
+    background-color: var(--primary-background-color);
+    line-height: 1.5;
+  }
+  
+  /* Reset básico */
+  a {
+    @apply no-underline text-current; /* Usando utilidades de Tailwind */
+  }
+  
+  ul {
+    @apply list-none;
+  }
+}
