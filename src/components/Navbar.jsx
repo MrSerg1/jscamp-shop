@@ -1,14 +1,18 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Navbar.module.css';
 
 const Navbar = () => {
   return (
-    <nav className={styles.nav}>
-      <Link to="/" className={styles.logo}>ShopStore</Link>
-      <ul className={styles.links}>
-        <li><Link to="/" className={styles.link}>Home</Link></li>
-        <li><Link to="/cart" className={styles.link}>Cart</Link></li>
+    <nav className="flex justify-between items-center p-4">
+      <Link
+        to="/"
+        className="text-2xl font-bold"
+        viewTransition
+      >
+        JSCampShop
+      </Link>
+      <ul className="flex gap-4">
+        <li><Link to="/" viewTransition>Home</Link></li>
+        <li><Link to="/cart" viewTransition>Cart</Link></li>
       </ul>
     </nav>
   );
