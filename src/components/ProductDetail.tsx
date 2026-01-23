@@ -2,7 +2,6 @@ import { products } from "../products-mock";
 import { useParams } from "react-router-dom";
 import Button from "./ui/Button";
 import Accordion from "./Accordion";
-import { Link } from "react-router-dom";
 
 export default function ProductDetail() {
   const id = useParams().id;
@@ -32,7 +31,7 @@ export default function ProductDetail() {
       {/* Content */}
       <div className="flex flex-col gap-4 -mt-15 md:mt-0 z-10">
         <div className="flex items-center gap-2">
-          {stars.map((star, index) => (
+          {stars.map((_, index) => (
             <svg
               key={index}
               xmlns="http://www.w3.org/2000/svg"
